@@ -1,2 +1,3 @@
 # GTA-SA-Sensitivity-Fix-Set
-You can't change vertical sensitivity in GTA SA without mods or changing the data @VerticalSensAddress yourself
+1. Start your game.
+2. Build&Run/Run this program.
