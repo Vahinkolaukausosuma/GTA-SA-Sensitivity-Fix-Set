@@ -1,8 +1,6 @@
 #include <windows.h>
 #include <psapi.h>
-//#include <Memoryapi.h>
 #include <iostream>
-//#include <tlhelp32.h>
 
 HANDLE ProgramHandle;
 DWORD HSens = 0xB6EC1C;
@@ -124,8 +122,15 @@ int main(int argc, char** argv)
 	//printf("2) Remove 25 degree camera turn when you let go of aim button\n");
 	printf("2) Set sensitivity\n");
 	printf("3) Exit\n");
+	printf("Select a number and press enter !\n");
 
 	std::cin >> choice;
+	if (!choice == 1 || !choice == 2 || !choice == 3)
+	{
+		printf("Incorrect input !!!\n");
+		CloseHandle(ProgramHandle);
+		exit(0);
+	}
 
 	switch (choice)
 	{
@@ -147,7 +152,7 @@ int main(int argc, char** argv)
 				printf("Setting sensitivity to: %f\n", inputFloat);
 				WriteFloat(VSens, inputFloat);
 				WriteFloat(HSens, inputFloat);
-				printf("Set!\n");
+				printf("Set !\n");
 			}
 			break;
 
@@ -157,7 +162,9 @@ int main(int argc, char** argv)
 			break;
 
 		default:
-			printf("incorrect input\n");
+			printf("Incorrect input !!!\n");
+			CloseHandle(ProgramHandle);
+			exit(0);
 			break;
 	}
 
