@@ -1,4 +1,4 @@
-# GTA SA Sensitivity Fix/Set
+# External GTA SA Sensitivity Fix/Set
 - Only works on US 1.0 version of gta_sa.exe  
 - Works in SA-MP  
 - Does not require any mods to function  
